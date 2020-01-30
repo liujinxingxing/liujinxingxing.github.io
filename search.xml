@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo的博客搭建</title>
+    <url>/2020/01/30/hexo%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="hexo博客的搭建"><a href="#hexo博客的搭建" class="headerlink" title="hexo博客的搭建"></a>hexo博客的搭建</h1><p>第一篇博客</p>
+<pre><code>NodeList proListtss = rootEle.getElementsByTagName(&quot;artifacts&quot;);
+            // xml解析
+            for (int i = 0; i &lt; proListtss.getLength(); i++) {
+                Element proEles = (Element)proListtss.item(i);
+                String size = proEles.getAttribute(&quot;size&quot;);
+                System.out.println(size);
+                NodeList protList = proEles.getElementsByTagName(&quot;artifact&quot;);
+                for (int j = 0; j &lt; protList.getLength(); j++) {
+                    Element item = (Element)protList.item(j);
+                    String name = item.getAttribute(&quot;classifier&quot;);
+                    String value = item.getAttribute(&quot;version&quot;);
+                    System.out.println(name + &quot;, &quot; + value);
+                    NodeList ppoList = item.getElementsByTagName(&quot;properties&quot;);
+                    Element item2 = (Element)ppoList.item(0);
+                    String size2 = item2.getAttribute(&quot;size&quot;);
+                    System.out.println(size2);
+                    NodeList ppList = item2.getElementsByTagName(&quot;property&quot;);
+                    Element item3 = (Element)ppList.item(0);
+                    String attribute2 = item3.getAttribute(&quot;property&quot;);
+                    System.out.println(attribute2);
+                }
+                   NodeList proListtss = rootEle.getElementsByTagName(&quot;artifacts&quot;);
+            // xml解析
+            for (int i = 0; i &lt; proListtss.getLength(); i++) {
+                Element proEles = (Element)proListtss.item(i);
+                String size = proEles.getAttribute(&quot;size&quot;);
+                System.out.println(size);
+                NodeList protList = proEles.getElementsByTagName(&quot;artifact&quot;);
+                for (int j = 0; j &lt; protList.getLength(); j++) {
+                    Element item = (Element)protList.item(j);
+                    String name = item.getAttribute(&quot;classifier&quot;);
+                    String value = item.getAttribute(&quot;version&quot;);
+                    System.out.println(name + &quot;, &quot; + value);
+                    NodeList ppoList = item.getElementsByTagName(&quot;properties&quot;);
+                    Element item2 = (Element)ppoList.item(0);
+                    String size2 = item2.getAttribute(&quot;size&quot;);
+                    System.out.println(size2);
+                    NodeList ppList = item2.getElementsByTagName(&quot;property&quot;);
+                    Element item3 = (Element)ppList.item(0);
+                    String attribute2 = item3.getAttribute(&quot;property&quot;);
+                    System.out.println(attribute2);
+                }
+                   NodeList proListtss = rootEle.getElementsByTagName(&quot;artifacts&quot;);
+            // xml解析
+            for (int i = 0; i &lt; proListtss.getLength(); i++) {
+                Element proEles = (Element)proListtss.item(i);
+                String size = proEles.getAttribute(&quot;size&quot;);
+                System.out.println(size);
+                NodeList protList = proEles.getElementsByTagName(&quot;artifact&quot;);
+                for (int j = 0; j &lt; protList.getLength(); j++) {
+                    Element item = (Element)protList.item(j);
+                    String name = item.getAttribute(&quot;classifier&quot;);
+                    String value = item.getAttribute(&quot;version&quot;);
+                    System.out.println(name + &quot;, &quot; + value);
+                    NodeList ppoList = item.getElementsByTagName(&quot;properties&quot;);
+                    Element item2 = (Element)ppoList.item(0);
+                    String size2 = item2.getAttribute(&quot;size&quot;);
+                    System.out.println(size2);
+                    NodeList ppList = item2.getElementsByTagName(&quot;property&quot;);
+                    Element item3 = (Element)ppList.item(0);
+                    String attribute2 = item3.getAttribute(&quot;property&quot;);
+                    System.out.println(attribute2);
+                }</code></pre>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/01/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="金星"><a href="#金星" class="headerlink" title="金星"></a>金星</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
