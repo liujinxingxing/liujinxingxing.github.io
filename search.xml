@@ -13,10 +13,10 @@
 
 <ul>
 <li>查询指定列</li>
-<li>可以使用as为列或表指定别名<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 列<span class="number">1</span>,列<span class="number">2</span>,... <span class="keyword">from</span> 表名;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span> <span class="keyword">from</span> classes;</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>可以使用as为列或表指定别名</li>
 </ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 列<span class="number">1</span>,列<span class="number">2</span>,... <span class="keyword">from</span> 表名;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span> <span class="keyword">from</span> classes;</span><br></pre></td></tr></table></figure>
+
 <h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><ul>
 <li>例: 创建学生表</li>
 <li>说明:格式:INSERT [INTO] tb_name [(col_name,…)] {VALUES | VALUE} ({expr | DEFAULT},…),(…),…<br>}</li>
@@ -29,16 +29,16 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名 <span class="keyword">values</span>(...)</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> students <span class="keyword">values</span>(<span class="number">0</span>,’郭靖‘,<span class="number">1</span>,<span class="string">'蒙古'</span>,<span class="string">'2020-1-2'</span>);</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>部分列插入：值的顺序与给出的列顺序对应</p>
+<li>部分列插入：值的顺序与给出的列顺序对应</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名(列<span class="number">1</span>,...) <span class="keyword">values</span>(值<span class="number">1</span>,...)</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> students(<span class="keyword">name</span>,hometown,birthday) <span class="keyword">values</span>(<span class="string">'黄蓉'</span>,<span class="string">'桃花岛'</span>,<span class="string">'2020-1-2'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>上面的语句一次可以向表中插入一行数据，还可以一次性插入多行数据，这样可以减少与数据库的通信</p>
-</li>
-<li><p>全列多行插入：值的顺序与给出的列顺序对应</p>
+
+<ul>
+<li>上面的语句一次可以向表中插入一行数据，还可以一次性插入多行数据，这样可以减少与数据库的通信</li>
+<li>全列多行插入：值的顺序与给出的列顺序对应</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名 <span class="keyword">values</span>(...),(...)...;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> classes <span class="keyword">values</span>(<span class="number">0</span>,<span class="string">'java1'</span>),(<span class="number">0</span>,<span class="string">'java2'</span>);</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表名(列<span class="number">1</span>,...) <span class="keyword">values</span>(值<span class="number">1</span>,...),(值<span class="number">1</span>,...)...;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> students(<span class="keyword">name</span>) <span class="keyword">values</span>(<span class="string">'杨康'</span>),(<span class="string">'杨过'</span>),(<span class="string">'小龙女'</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><ul>
 <li>格式: UPDATE tbname SET col1={expr1|DEFAULT} [,col2={expr2|default}]…[where 条件判断]</li>
@@ -49,9 +49,9 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表名 <span class="keyword">where</span> 条件</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>逻辑删除，本质就是修改操作<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> isdelete=<span class="number">1</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>逻辑删除，本质就是修改操作</li>
 </ul>
-]]></content>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> isdelete=<span class="number">1</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -69,10 +69,10 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> classes(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> auto_increment primary <span class="keyword">key</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">10</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>例: 创建学生表<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> students(</span><br><span class="line">   	 <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="string">''</span>,</span><br><span class="line">    age <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    height <span class="built_in">decimal</span>(<span class="number">5</span>,<span class="number">2</span>),</span><br><span class="line">    gender enum(<span class="string">'男'</span>,<span class="string">'女'</span>,<span class="string">'保密'</span>),</span><br><span class="line">    cls_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>例: 创建学生表</li>
 </ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> students(</span><br><span class="line">   	 <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="string">''</span>,</span><br><span class="line">    age <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    height <span class="built_in">decimal</span>(<span class="number">5</span>,<span class="number">2</span>),</span><br><span class="line">    gender enum(<span class="string">'男'</span>,<span class="string">'女'</span>,<span class="string">'保密'</span>),</span><br><span class="line">    cls_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
 <h3 id="修改表-添加字段"><a href="#修改表-添加字段" class="headerlink" title="修改表-添加字段"></a>修改表-添加字段</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span> 列名 类型;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> students <span class="keyword">add</span> birthday datetime;</span><br></pre></td></tr></table></figure>
 <h3 id="修改表-修改字段：重命名版"><a href="#修改表-修改字段：重命名版" class="headerlink" title="修改表-修改字段：重命名版"></a>修改表-修改字段：重命名版</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">change</span> 原名 新名 类型及约束;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> students <span class="keyword">change</span> birthday birth datetime <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="修改表-修改字段：不重命名版"><a href="#修改表-修改字段：不重命名版" class="headerlink" title="修改表-修改字段：不重命名版"></a>修改表-修改字段：不重命名版</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 类型及约束;</span><br><span class="line">例：</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> students <span class="keyword">modify</span> birth <span class="built_in">date</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
