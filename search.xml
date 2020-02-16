@@ -60,9 +60,9 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql(二)</title>
+    <title>MySql之数据表的操作(二)</title>
     <url>/2020/01/30/mysql-02/</url>
-    <content><![CDATA[<h2 id="MySql之数据表的操作-二"><a href="#MySql之数据表的操作-二" class="headerlink" title="MySql之数据表的操作(二)"></a>MySql之数据表的操作(二)</h2><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><h3 id="auto-increment表示自动增长"><a href="#auto-increment表示自动增长" class="headerlink" title="auto_increment表示自动增长"></a>auto_increment表示自动增长</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> table_name(</span><br><span class="line">    column1 datatype contrai,</span><br><span class="line">    column2 datatype,</span><br><span class="line">    column3 datatype,</span><br><span class="line">    .....</span><br><span class="line">    columnN datatype,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span>(one <span class="keyword">or</span> more <span class="keyword">columns</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><h3 id="auto-increment表示自动增长"><a href="#auto-increment表示自动增长" class="headerlink" title="auto_increment表示自动增长"></a>auto_increment表示自动增长</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> table_name(</span><br><span class="line">    column1 datatype contrai,</span><br><span class="line">    column2 datatype,</span><br><span class="line">    column3 datatype,</span><br><span class="line">    .....</span><br><span class="line">    columnN datatype,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span>(one <span class="keyword">or</span> more <span class="keyword">columns</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>例：创建班级表</li>
