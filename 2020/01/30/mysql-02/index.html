@@ -46,17 +46,20 @@
   };
 </script>
 
-  <meta name="description" content="一起去划水">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Avocado">
-<meta property="og:url" content="https://liujinxingxing.github.io/categories/%E6%8A%80%E6%9C%AF/index.html">
+  <meta name="description" content="数据表的操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql_02">
+<meta property="og:url" content="https://liujinxingxing.github.io/2020/01/30/mysql-02/index.html">
 <meta property="og:site_name" content="Avocado">
-<meta property="og:description" content="一起去划水">
+<meta property="og:description" content="数据表的操作">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-30T06:10:00.000Z">
+<meta property="article:modified_time" content="2020-02-16T09:07:38.191Z">
 <meta property="article:author" content="溜溜球">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://liujinxingxing.github.io/categories/%E6%8A%80%E6%9C%AF/">
+<link rel="canonical" href="https://liujinxingxing.github.io/2020/01/30/mysql-02/">
 
 
 <script id="page-configurations">
@@ -64,11 +67,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>分类: 技术 | Avocado</title>
+  <title>mysql_02 | Avocado</title>
   
 
 
@@ -216,70 +219,149 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">技术
-          <small>分类</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://liujinxingxing.github.io/2020/01/30/mysql-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179784106,3390362903&fm=26&gp=0.jpg#/images/avatar.gif">
+      <meta itemprop="name" content="溜溜球">
+      <meta itemprop="description" content="一起去划水">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avocado">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mysql_02
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-30 14:10:00" itemprop="dateCreated datePublished" datetime="2020-01-30T14:10:00+08:00">2020-01-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-16 17:07:38" itemprop="dateModified" datetime="2020-02-16T17:07:38+08:00">2020-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">数据表的操作</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <h2 id="MySql之数据表的操作-二"><a href="#MySql之数据表的操作-二" class="headerlink" title="MySql之数据表的操作(二)"></a>MySql之数据表的操作(二)</h2><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><h3 id="auto-increment表示自动增长"><a href="#auto-increment表示自动增长" class="headerlink" title="auto_increment表示自动增长"></a>auto_increment表示自动增长</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	CREATE TABLE table_name(</span><br><span class="line">    column1 datatype contrai,</span><br><span class="line">    column2 datatype,</span><br><span class="line">    column3 datatype,</span><br><span class="line">    .....</span><br><span class="line">    columnN datatype,</span><br><span class="line">    PRIMARY KEY(one or more columns)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<ul>
+<li>例：创建班级表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table classes(</span><br><span class="line">    id int unsigned auto_increment primary key not null,</span><br><span class="line">    name varchar(10)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-30T14:10:00+08:00"
-              content="2020-01-30">
-          01-30
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/30/mysql-02/" itemprop="url">
-            <span itemprop="name">mysql_02</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-30T13:52:00+08:00"
-              content="2020-01-30">
-          01-30
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/30/mysql_01/" itemprop="url">
-            <span itemprop="name">mysql_01</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<ul>
+<li>例: 创建学生表<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table students(</span><br><span class="line">    id int unsigned primary key auto_increment not null,</span><br><span class="line">    name varchar(20) default &#39;&#39;,</span><br><span class="line">    age tinyint unsigned default 0,</span><br><span class="line">    height decimal(5,2),</span><br><span class="line">    gender enum(&#39;男&#39;,&#39;女&#39;,&#39;保密&#39;),</span><br><span class="line">    cls_id int unsigned default 0</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
     </div>
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="溜溜球 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="溜溜球 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
+</div>
+
+
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/30/mysql_01/" rel="prev" title="mysql_01">
+      <i class="fa fa-chevron-left"></i> mysql_01
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
   
   
 
-  
-
+  </div>
 
 
           </div>
@@ -330,6 +412,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySql之数据表的操作-二"><span class="nav-number">1.</span> <span class="nav-text">MySql之数据表的操作(二)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">1.1.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#auto-increment表示自动增长"><span class="nav-number">1.2.</span> <span class="nav-text">auto_increment表示自动增长</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
